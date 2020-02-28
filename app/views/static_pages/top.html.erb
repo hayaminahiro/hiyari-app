@@ -1,2 +1,11 @@
-<h1>StaticPages#top</h1>
-<p>Find me in app/views/static_pages/top.html.erb</p>
+<% provide(:title, "Top") %>
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= yield(:title) %>|ヒヤリ・事故管理システム</title>
+</head>
+<body>
+  <h1>ヒヤリハット・事故報告書管理システム</h1>
+  <p>このアプリではヒヤリハット・事故報告書を管理できます。</p>
+</body>
+</html>
