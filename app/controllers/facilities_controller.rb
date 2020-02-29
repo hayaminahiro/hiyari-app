@@ -11,6 +11,7 @@ class FacilitiesController < ApplicationController
   def create
     @facility = Facility.new(facility_params)
     if @facility.save
+      log_in @facility
       flash[:success] = '新規作成に成功しました。'
       redirect_to @facility
     else
